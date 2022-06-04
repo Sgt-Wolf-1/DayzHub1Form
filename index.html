@@ -1,0 +1,66 @@
+-werty
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title> Dayz Hub 1 form</title>
+		<link rel="stylesheet" href=style.css>
+		</head>
+		<body>
+		
+		<div class="container">
+		
+		<form onsubmit="sendEmail(); reset(); return false">
+		<h3> Dayz Hub Application </h3>
+		
+		<input type="text" name="name" placeholder="What is your name?">
+		
+		<input type="text" name="PSN" placeholder="What is your PSN?">
+		
+		<input type="text" name="age" placeholder="How old are you?">
+		
+		<input type="text" name="email" placeholder="What is your email?">
+		
+		<input type="text" name="active" placeholder="How often are you on?">
+		
+		<input type="text" name="position" placeholder="What postion do you want?">
+		
+		<textarea name="how long/have you" placeholder="have you been in this position before? if so how long?"></textarea>
+		
+		<button type="submit" name="submit">Submit form</button>
+		
+		</form>
+		</div>
+		
+		<script src="https://smtpjs.com/v3/smtp.js"></script>
+		<script>
+		function sendEmail(){
+		Email.send({
+    Host : "smtp.gmail.com",
+    Username : "padgettrj42@gmail.com",
+    Password : "rjpadgett1998",
+    To : 'padgettrj42@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "New applicant",
+    Body : "Name: " + document.getElementById("name").value
+	+ "<br>" + "PSN:" + document.getElementById("PSN").value
+			+ "<br>" + "Age:" + document.getElementById("age").value
+			+ "<br>" + "Email:" + document.getElementById("email").value
+			+ "<br>" + "Active:" + document.getElementById("active").value
+			+ "<br>" + "position:" + document.getElementById("position").value
+			+ "<br>" + "how long/have you:" + document.getElementById("how long/have you").value
+			
+}).then(
+  message => alert("Form was sent")
+);
+		}
+		</script>
+		
+		</body>
+</html>

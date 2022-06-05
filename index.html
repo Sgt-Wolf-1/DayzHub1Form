@@ -38,29 +38,7 @@
 		</form>
 		</div>
 		
-		<script src="https://smtpjs.com/v3/smtp.js"></script>
-		<script>
-		function sendEmail(){
-		Email.send({
-    Host : "https://sgt-wolf-1.github.io/DayzHub1Form/",
-    Username : "Sgt_Wolf_1",
-    Password : "rjpadgett1998",
-    To : 'padgettrj42@gmail.com',
-    From : document.getElementById("email").value,
-    Subject : "New applicant",
-    Body : "Name: " + document.getElementById("name").value
-	+ "<br>" + "PSN:" + document.getElementById("PSN").value
-			+ "<br>" + "Age:" + document.getElementById("age").value
-			+ "<br>" + "Email:" + document.getElementById("email").value
-			+ "<br>" + "Active:" + document.getElementById("active").value
-			+ "<br>" + "position:" + document.getElementById("position").value
-			+ "<br>" + "how long/have you:" + document.getElementById("how long/have you").value
-			
-}).then(
-  message => alert("Form was sent")
-);
-		}
-		</script>
+		
 		
 		</body>
 </html>
